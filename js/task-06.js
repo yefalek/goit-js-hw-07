@@ -6,10 +6,8 @@ let intTotallenght = parseInt(allLenght, 10);
 inputText.oninput = function() {
   if (inputText.value.length === intTotallenght) {
     inputText.classList.remove("invalid");
+    inputText.classList.add("valid");
   }
   
   else { inputText.classList.add("invalid"); }
 };
-
-// inputText.oninput = (inputText.value.length === intTotallenght )?
-//   inputText.classList.remove("invalid") : inputText.classList.add("invalid");
