@@ -1,11 +1,14 @@
 let render = document.querySelector('[data-action="render"]');
 let destroy = document.querySelector('[data-action="destroy"]');
 let boxes = document.getElementById('boxes');
+const input = document.querySelector('#controls input');
 
 render.addEventListener('click', getAmount);
 
 function getAmount() {
-  const amount = +document.querySelector('#controls input').value;
+  
+  const amount = input.value;
+ // const amount = +document.querySelector('#controls input').value;
   createBoxes(amount);
 }
 destroy.addEventListener('click', destroyBoxes);
